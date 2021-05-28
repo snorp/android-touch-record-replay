@@ -3,6 +3,9 @@
 echo "Looking for touchscreen device..."
 TOUCH_DEVICE=`./find_touchscreen_name.sh`
 
+adb root
+adb shell setenforce 0
+
 echo "$TOUCH_DEVICE"
 
 # Check if the file `mysendevent` exists in the phone
