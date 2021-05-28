@@ -9,7 +9,7 @@ echo "$TOUCH_DEVICE"
 
 MYSENDEVENT=`adb shell ls /data/local/tmp/mysendevent 2>&1`
 echo ---"$MYSENDEVENT"---
-[[ "$MYSENDEVENT" == *"No such file or directory"* ]] && adb push mysendevent /data/local/tmp/
+[[ "$MYSENDEVENT" == *"No such file or directory"* ]] && adb push mysendevent-arm64 /data/local/tmp/mysendevent
 
 adb push recorded_touch_events.txt /sdcard/
 
